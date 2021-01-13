@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'PoppinsExtraLight';
+    src: url('fonts/PoppinsExtraLight.eot');
+    src: url('fonts/PoppinsExtraLight.eot') format('embedded-opentype'),
+         url('fonts/PoppinsExtraLight.woff2') format('woff2'),
+         url('fonts/PoppinsExtraLight.woff') format('woff'),
+         url('fonts/PoppinsExtraLight.ttf') format('truetype'),
+         url('fonts/PoppinsExtraLight.svg#PoppinsExtraLight') format('svg');
+}
+
+* {
+    font-family:PoppinsExtraLight;
+    color: #000;
+}
+body {
+    overflow-x:hidden;
+    margin: 0;
+    background: linear-gradient(to right,#a2f8e2,#8fd6f6);
+}
+select {
+    color:#000;
+}
+header {
+    height: 15vh;
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+header > span {
+    margin-top: 30px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+footer {
+    height:15vh;
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    font-size: 20px;
+}
+footer span {
+    padding-left:10vw;
+    text-align: center;
+}
+.app {
+    background: #ffffff;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: 70vh;
+    display: inline-flex;
+    min-height: 850px;
+}
+
+.app .frame-container {
+    width: 70vw;  
+    display: flex;
+    justify-content: center;
+    border: 2px solid  rgba(0, 0, 0, 0.5);
+}
+.app .menu {
+    width: 20vw;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+.settings {
+    display: grid;
+    align-content: center;
+    height: 50%;
+    
+}
+
+.settings .select-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.settings .select-block .selection {
+    width: 10em;
+    margin-top: 20px;
+}
+.settings .button {
+    margin-top: 20px;
+}
+.settings #reload {
+    width: 10em;
+}
+
+.timer-block {
+    height: 50%;
+    margin-top: 20px;
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+}
+#timer {
+    font-size: 60px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+#frame .row > div {
+    background-image: url(../img/0.jpg);
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    border: 0px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    float: left;
+}
+#frame {
+    display: grid;
+    align-content: center;
+}
+

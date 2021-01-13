@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="icon" href="img/favicon.png" type="image/x-icon">
+		<title>Find pairs</title>
+	</head>
+	<body>
+		<header>
+			<span>memboost</span>
+		</header>
+		
+		<div class="app">
+			<div class="frame-container">
+				<div id="frame"></div>
+			</div>
+			<div class="menu">
+				<div class="settings">
+					<div class="select-block">
+						<p>Categories:</p>
+						<select id="select-cat" class="selection">
+							<option value="pokemons">Pokemons</option> 
+							<option value="logos">Logotypes</option>
+							<option value="automobiles">Automobiles</option> 
+							<option value="animals">Animals</option>
+						</select>
+						<select id="select-size" class="selection">
+							<option value="4">4x4</option>
+							<option value="6">6x6</option> 
+							<option value="8">8x8</option> 
+						</select>
+					</div>
+					<div class="button">
+						<button id="reload">Again</button>
+					</div>
+				</div>
+				<div class="timer-block">
+					<div id="timer">
+						<div id="minutes">0</div>
+						<span>:</span>
+						<div id="seconds">0</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<footer>
+			<span><b>Autor: </b>
+				Timergaliev 
+			</span>
+		</footer>
+	</body>
+	<script src="jquery.min.js">
+	</script>
+	<script>
+        var ip = "<?php echo $_SERVER['REMOTE_ADDR']; php?>";
+        
+        //alert("Твой IP "+ ip);
+        //window.defaultStatus = "Your IP address is "+ip;
+        //document.write("<title>Your IP address is "+ip+"</title>";
+    </script>
+	<script src="js/script.js"></script>
+
+</html>
