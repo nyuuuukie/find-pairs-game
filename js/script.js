@@ -5,8 +5,9 @@ window.addEventListener('DOMContentLoaded', () => {
         selSize = document.querySelector("#select-size"), //Select size
         reloadBtn = document.querySelector('#reload'),    //Restart
         minField = document.querySelector('#minutes'),     //Timer min's
-        secField = document.querySelector('#seconds');     //Timer sec's
-    
+        secField = document.querySelector('#seconds'),     //Timer sec's
+        player = document.querySelector("#player");        //Player
+
     let frame = document.querySelector('#frame');
 
     let size,               //Get chosen size
@@ -28,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     selCat.addEventListener('change', setBasicParams);
     selSize.addEventListener('change', setBasicParams);
-    reloadBtn.addEventListener('click',setBasicParams);
+    reloadBtn.addEventListener('click', setBasicParams);
 
     ///////////////////////////////////////////////////	   
     function setClock() {
@@ -56,6 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 //Start timer on first click
                 if (firstClick) {
                     firstClick = false;
+                    player.play();
                     timerid = setInterval(setClock, 1000);
                 }
 
@@ -88,12 +90,12 @@ window.addEventListener('DOMContentLoaded', () => {
                             openedImages += 2;
                             
                             if (openedImages == (size ** 2)) {
+                                stopMusic();
                                 clearInterval(timerid);
                                 clearGameData();
                                 let img = document.createElement('img');
                                 img.setAttribute('src','img/win.jpg');
                                 frame.appendChild(img);
-                                console.log('Youre win!'); //WIIIIIIIIIIIIIIIIIIN
                             }
                         } else {
                             //If the pictures doesnt match
@@ -125,7 +127,13 @@ window.addEventListener('DOMContentLoaded', () => {
         canClick = true;
     }
 
+    function stopMusic() {
+        player.pause();
+        player.currentTime = 0;   
+    }
+
     function setBasicParams() {
+        stopMusic();
         //If select params changed we need to clear last data
             clearGameData();
             rows = [];
